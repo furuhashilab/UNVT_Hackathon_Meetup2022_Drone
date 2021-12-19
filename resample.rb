@@ -4,16 +4,12 @@ require 'json'
 
 z = ENV['Z'].to_i
 spacing = (BASE ** (Z_ONE_METER - z)).to_f
-basename = ENV['BASENAME']
-#src_path = "#{TMP_DIR}/#{basename}-#{z - 1}.las"
-src_path = "#{TMP_DIR}/#{basename}-3857.las" #unless File.exist?(src_path)
-dst_path = "#{TMP_DIR}/#{basename}-#{z}.las"
-$stderr.print "#{spacing}m for #{dst_path} from #{src_path}\n"
+$stderr.print "#{spacing}m from #{SRC_PATH}\n"
 
 pipeline = <<-EOS
 pipeline: 
   - 
-    filename: #{src_path}
+    filename: #{REPROJECTED_PATH}
     type: readers.las
   -
     type: filters.voxelcenternearestneighbor

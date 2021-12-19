@@ -1,8 +1,8 @@
 {
   "version": 8,
   "center": [
-    138.779256,
-    35.158042
+    139.402666,
+    35.566931
   ],
   "zoom": 17,
   "layers": [
@@ -59,28 +59,6 @@
       }
     },
     {
-      "id": "grid",
-      "source": "grid",
-      "source-layer": "sizuokaLP0",
-      "type": "fill",
-      "paint": {
-        "fill-color": "rgb(60, 60, 60)",
-        "fill-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          0,
-          16,
-          1
-        ]
-      }
-    },
-    {
       "id": "voxel",
       "type": "fill-extrusion",
       "source": "voxel",
@@ -124,11 +102,11 @@
   "sources": {
     "voxel": {
       "type": "vector",
-      "attribution": "出典:静岡県ポイントクラウドデータベース",
+      "attribution": "furuhashilab",
       "minzoom": 10,
       "maxzoom": 18,
       "tiles": [
-        "https://x.optgeo.org/kid-c/zxy/{z}/{x}/{y}.pbf"
+        "http://m330:9967/zxy/{z}/{x}/{y}.pbf"
       ]
     },
     "adm": {
@@ -147,15 +125,6 @@
       "tileSize": 512,
       "tiles": [
         "https://optgeo.github.io/relief/zxy/{z}/{x}/{y}.png"
-      ]
-    },
-    "grid": {
-      "type": "vector",
-      "attribution": "<a href=\"https://www.geospatial.jp/ckan/dataset/shizuoka-2019-pointcloud/resource/d5e98a7b-f15c-45b0-bf40-0287f5b1de68\">静岡県富士山南東部・伊豆東部点群データ:LP データ(静岡県／G空間情報センター)</a>",
-      "minzoom": 10,
-      "maxzoom": 18,
-      "tiles": [
-        "https://gic-shizuoka.s3-ap-northeast-1.amazonaws.com/2020/Vectortile/LP00/{z}/{x}/{y}.pbf"
       ]
     }
   }
