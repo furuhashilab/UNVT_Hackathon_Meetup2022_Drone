@@ -1,0 +1,40 @@
+version: 8
+center:
+  - 138.779256
+  - 35.158042
+zoom: 17
+layers:
+  - !!inc/file layers/background.yml
+  - !!inc/file layers/relief.yml
+  - !!inc/file layers/adm.yml
+  - !!inc/file layers/grid.yml
+  - !!inc/file layers/voxel.yml
+sources:
+  voxel:
+    type: vector
+    attribution: 出典:静岡県ポイントクラウドデータベース
+    minzoom: 10
+    maxzoom: 18
+    tiles:
+      - https://x.optgeo.org/kid-c/zxy/{z}/{x}/{y}.pbf
+  adm:
+    type: vector
+    attribution: <a title='測量法に基づく国土地理院長承認(使用)R 2JHs 1065'>R 2JHs 1065</a>
+    minzoom: 7
+    maxzoom: 13
+    tiles:
+      - https://optgeo.github.io/fgd-adm/zxy/{z}/{x}/{y}.pbf
+  relief:
+    type: raster
+    minzoom: 0
+    maxzoom: 5
+    tileSize: 512
+    tiles:
+      - https://optgeo.github.io/relief/zxy/{z}/{x}/{y}.png
+  grid:
+    type: vector
+    attribution: <a href="https://www.geospatial.jp/ckan/dataset/shizuoka-2019-pointcloud/resource/d5e98a7b-f15c-45b0-bf40-0287f5b1de68">静岡県富士山南東部・伊豆東部点群データ:LP データ(静岡県／G空間情報センター)</a>
+    minzoom: 10
+    maxzoom: 18
+    tiles:
+      - https://gic-shizuoka.s3-ap-northeast-1.amazonaws.com/2020/Vectortile/LP00/{z}/{x}/{y}.pbf
