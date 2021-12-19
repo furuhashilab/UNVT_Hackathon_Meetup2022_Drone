@@ -5,7 +5,7 @@ require 'json'
 pipeline = <<-EOS
 pipeline: 
   - 
-    filename: #{SRC_URL.split('/')[-1]}
+    filename: #{SRC_PATH}
     type: readers.las
     spatialreference: "#{SRC_EPSG}"
   -
@@ -13,7 +13,7 @@ pipeline:
     out_srs: "EPSG:3857"
   -
     type: writers.las
-    filename: #{PROJECTED_PATH}
+    filename: #{REPROJECTED_PATH}
 EOS
 
 print JSON.dump(YAML.load(pipeline))
