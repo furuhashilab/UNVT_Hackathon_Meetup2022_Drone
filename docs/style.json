@@ -106,7 +106,7 @@
       "minzoom": 10,
       "maxzoom": 18,
       "tiles": [
-        "http://m330:9967/zxy/{z}/{x}/{y}.pbf"
+        "https://hfu.github.io/UNVT_Hackathon_Meetup2022_Drone/zxy/{z}/{x}/{y}.pbf"
       ]
     },
     "adm": {
