@@ -1,0 +1,332 @@
+version: 8
+name: dronebird_logo_en.png
+metadata:
+  mapbox:type: default
+  mapbox:origin: monochrome-dark-v1
+  mapbox:autocomposite: true
+  mapbox:groups:
+    Transit, transit-labels:
+      name: Transit, transit-labels
+      collapsed: false
+    Administrative boundaries, admin:
+      name: Administrative boundaries, admin
+      collapsed: false
+    Land & water, built:
+      name: Land & water, built
+      collapsed: false
+    Transit, bridges:
+      name: Transit, bridges
+      collapsed: false
+    Transit, surface:
+      name: Transit, surface
+      collapsed: false
+    Land & water, land:
+      name: Land & water, land
+      collapsed: false
+    Road network, bridges:
+      name: Road network, bridges
+      collapsed: false
+    Road network, tunnels:
+      name: Road network, tunnels
+      collapsed: false
+    Road network, road-labels:
+      name: Road network, road-labels
+      collapsed: false
+    Buildings, built:
+      name: Buildings, built
+      collapsed: false
+    Natural features, natural-labels:
+      name: Natural features, natural-labels
+      collapsed: false
+    Road network, surface:
+      name: Road network, surface
+      collapsed: false
+    Place labels, place-labels:
+      name: Place labels, place-labels
+      collapsed: false
+    Point of interest labels, poi-labels:
+      name: Point of interest labels, poi-labels
+      collapsed: false
+    Road network, tunnels-case:
+      name: Road network, tunnels-case
+      collapsed: false
+    Transit, built:
+      name: Transit, built
+      collapsed: false
+    Road network, surface-icons:
+      name: Road network, surface-icons
+      collapsed: false
+    Land & water, water:
+      name: Land & water, water
+      collapsed: false
+  mapbox:sdk-support:
+    js: latest
+    android: latest
+    ios: latest
+  mapbox:uiParadigm: components
+  mapbox:decompiler:
+    id: ckxeskwi41rit14qwwy3200c2
+    componentVersion: 3.0.0
+    strata:
+      - id: monochrome-dark-v1
+        order:
+          - - land-and-water
+            - land
+          - - land-and-water
+            - water
+          - - land-and-water
+            - built
+          - - transit
+            - built
+          - - buildings
+            - built
+          - - road-network
+            - tunnels-case
+          - - road-network
+            - tunnels
+          - - transit
+            - ferries
+          - - road-network
+            - surface
+          - - transit
+            - surface
+          - - road-network
+            - surface-icons
+          - - road-network
+            - bridges
+          - - transit
+            - bridges
+          - - road-network
+            - traffic-and-closures
+          - - buildings
+            - extruded
+          - - transit
+            - elevated
+          - - admin-boundaries
+            - admin
+          - - buildings
+            - building-labels
+          - - road-network
+            - road-labels
+          - - transit
+            - ferry-aerialway-labels
+          - - natural-features
+            - natural-labels
+          - - point-of-interest-labels
+            - poi-labels
+          - - transit
+            - transit-labels
+          - - place-labels
+            - place-labels
+    components:
+      land-and-water: 3.0.0
+      buildings: 3.0.0
+      road-network: 3.0.0
+      admin-boundaries: 3.0.0
+      natural-features: 3.0.0
+      point-of-interest-labels: 3.0.0
+      transit: 3.0.0
+      place-labels: 3.0.0
+    propConfig:
+      land-and-water:
+        color-place-label: '#ddeef6'
+        color-transit: '#ddeef6'
+        color-road: '#004762'
+        landcover: true
+        color-greenspace: hsl(199, 78%, 57%)
+        color-water: hsl(196, 60%, 77%)
+        color-road-label: '#ddeef6'
+        transitionLandOnZoom: false
+        waterStyle: Shadow
+        color-base: hsl(196, 63%, 33%)
+      buildings:
+        color-place-label: '#ddeef6'
+        color-transit: '#ddeef6'
+        houseNumbers: false
+        color-road: '#004762'
+        color-greenspace: '#447084'
+        color-water: '#55b3db'
+        color-road-label: '#ddeef6'
+        color-base: hsl(196, 63%, 33%)
+        underground: false
+      road-network:
+        icon-color-scheme: monochrome
+        color-place-label: '#ddeef6'
+        color-transit: '#ddeef6'
+        shields: false
+        color-road: hsl(197, 100%, 19%)
+        color-greenspace: '#447084'
+        color-water: '#55b3db'
+        color-road-label: '#ddeef6'
+        oneWayArrows: false
+        railwayCrossings: false
+        exits: false
+        polygonFeatures: false
+        language: Japanese
+        color-base: hsl(196, 63%, 33%)
+      admin-boundaries:
+        admin0: true
+        color-place-label: hsl(199, 52%, 100%)
+        color-transit: '#ddeef6'
+        color-road: '#004762'
+        color-greenspace: '#447084'
+        color-water: '#55b3db'
+        color-road-label: '#ddeef6'
+        worldview: US
+        color-base: hsl(196, 63%, 33%)
+      natural-features:
+        color-place-label: '#ddeef6'
+        waterLabelsFont:
+          - Noto Sans CJK JP Medium
+          - Arial Unicode MS Regular
+        density: 1
+        color-transit: '#ddeef6'
+        color-road: '#004762'
+        color-greenspace: '#447084'
+        color-water: hsl(196, 60%, 77%)
+        color-road-label: '#ddeef6'
+        language: English
+        poiEtcFont:
+          - Noto Sans CJK JP Bold
+          - Arial Unicode MS Regular
+        color-base: hsl(196, 63%, 33%)
+        labelStyle: Text only
+      point-of-interest-labels:
+        color-place-label: '#ddeef6'
+        density: 1
+        color-transit: '#ddeef6'
+        color-road: '#004762'
+        color-greenspace: hsl(199, 78%, 57%)
+        color-water: '#55b3db'
+        color-road-label: '#ddeef6'
+        color-greenspace-label: hsl(196, 84%, 77%)
+        language: Japanese
+        poiEtcFont:
+          - Noto Sans CJK JP Bold
+          - Arial Unicode MS Regular
+        color-base: hsl(196, 63%, 33%)
+        labelStyle: Text only
+      transit:
+        icon-color-scheme: monochrome
+        color-place-label: '#ddeef6'
+        color-transit: hsl(199, 58%, 92%)
+        aerialways: false
+        color-road: hsl(197, 100%, 19%)
+        color-greenspace: '#447084'
+        color-water: hsl(196, 60%, 77%)
+        color-road-label: '#ddeef6'
+        transitLabels: false
+        railwayStyle: Solid
+        ferries: false
+        language: Japanese
+        poiEtcFont:
+          - Noto Sans CJK JP Bold
+          - Arial Unicode MS Regular
+        color-base: hsl(196, 63%, 33%)
+      place-labels:
+        color-place-label: hsl(199, 52%, 100%)
+        color-transit: '#ddeef6'
+        color-road: '#004762'
+        color-greenspace: '#447084'
+        color-water: '#55b3db'
+        color-road-label: '#ddeef6'
+        worldview: US
+        language: English
+        color-base: hsl(196, 63%, 33%)
+center:
+  - 111.97247664456944
+  - 34.61307627715273
+zoom: 2.4183591197984162
+bearing: 0
+pitch: 0
+sources:
+  composite:
+    url: mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v8
+    type: vector
+sprite: mapbox://sprites/nao2123/ckxf6aymb31n414mk2cku9wx5/afjczyo6wncr1rpu971sdzfck
+glyphs: mapbox://fonts/mapbox/{fontstack}/{range}.pbf
+layers:
+  - !!inc/file layers/land.yml
+  - !!inc/file layers/landcover.yml
+  - !!inc/file layers/national-park.yml
+  - !!inc/file layers/landuse.yml
+  - !!inc/file layers/pitch-outline.yml
+  - !!inc/file layers/waterway-shadow.yml
+  - !!inc/file layers/water-shadow.yml
+  - !!inc/file layers/waterway.yml
+  - !!inc/file layers/water.yml
+  - !!inc/file layers/land-structure-polygon.yml
+  - !!inc/file layers/land-structure-line.yml
+  - !!inc/file layers/aeroway-polygon.yml
+  - !!inc/file layers/aeroway-line.yml
+  - !!inc/file layers/building-outline.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/tunnel-street-minor-low.yml
+  - !!inc/file layers/tunnel-street-minor-case.yml
+  - !!inc/file layers/tunnel-primary-secondary-tertiary-case.yml
+  - !!inc/file layers/tunnel-major-link-case.yml
+  - !!inc/file layers/tunnel-motorway-trunk-case.yml
+  - !!inc/file layers/tunnel-construction.yml
+  - !!inc/file layers/tunnel-major-link.yml
+  - !!inc/file layers/tunnel-street-minor.yml
+  - !!inc/file layers/tunnel-primary-secondary-tertiary.yml
+  - !!inc/file layers/tunnel-motorway-trunk.yml
+  - !!inc/file layers/turning-feature-outline.yml
+  - !!inc/file layers/road-minor-low.yml
+  - !!inc/file layers/road-minor-case.yml
+  - !!inc/file layers/road-street-low.yml
+  - !!inc/file layers/road-street-case.yml
+  - !!inc/file layers/road-secondary-tertiary-case.yml
+  - !!inc/file layers/road-primary-case.yml
+  - !!inc/file layers/road-major-link-case.yml
+  - !!inc/file layers/road-motorway-trunk-case.yml
+  - !!inc/file layers/road-construction.yml
+  - !!inc/file layers/road-major-link.yml
+  - !!inc/file layers/road-minor.yml
+  - !!inc/file layers/road-street.yml
+  - !!inc/file layers/road-secondary-tertiary.yml
+  - !!inc/file layers/road-primary.yml
+  - !!inc/file layers/road-motorway-trunk.yml
+  - !!inc/file layers/road-rail.yml
+  - !!inc/file layers/turning-feature.yml
+  - !!inc/file layers/bridge-street-minor-low.yml
+  - !!inc/file layers/bridge-street-minor-case.yml
+  - !!inc/file layers/bridge-primary-secondary-tertiary-case.yml
+  - !!inc/file layers/bridge-major-link-case.yml
+  - !!inc/file layers/bridge-motorway-trunk-case.yml
+  - !!inc/file layers/bridge-construction.yml
+  - !!inc/file layers/bridge-major-link.yml
+  - !!inc/file layers/bridge-street-minor.yml
+  - !!inc/file layers/bridge-primary-secondary-tertiary.yml
+  - !!inc/file layers/bridge-motorway-trunk.yml
+  - !!inc/file layers/bridge-major-link-2-case.yml
+  - !!inc/file layers/bridge-motorway-trunk-2-case.yml
+  - !!inc/file layers/bridge-major-link-2.yml
+  - !!inc/file layers/bridge-motorway-trunk-2.yml
+  - !!inc/file layers/bridge-rail.yml
+  - !!inc/file layers/admin-1-boundary-bg.yml
+  - !!inc/file layers/admin-0-boundary-bg.yml
+  - !!inc/file layers/admin-1-boundary.yml
+  - !!inc/file layers/admin-0-boundary.yml
+  - !!inc/file layers/admin-0-boundary-disputed.yml
+  - !!inc/file layers/road-label.yml
+  - !!inc/file layers/road-intersection.yml
+  - !!inc/file layers/waterway-label.yml
+  - !!inc/file layers/natural-line-label.yml
+  - !!inc/file layers/natural-point-label.yml
+  - !!inc/file layers/water-line-label.yml
+  - !!inc/file layers/water-point-label.yml
+  - !!inc/file layers/poi-label.yml
+  - !!inc/file layers/airport-label.yml
+  - !!inc/file layers/settlement-subdivision-label.yml
+  - !!inc/file layers/settlement-minor-label.yml
+  - !!inc/file layers/settlement-major-label.yml
+  - !!inc/file layers/state-label.yml
+  - !!inc/file layers/country-label.yml
+created: '2021-12-20T21:11:20.804Z'
+modified: '2021-12-20T21:11:20.804Z'
+id: ckxf6aymb31n414mk2cku9wx5
+owner: nao2123
+visibility: private
+protected: false
+draft: false
