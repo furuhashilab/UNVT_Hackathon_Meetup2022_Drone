@@ -1,0 +1,478 @@
+version: 8
+name: dronebird_logo.jpg
+metadata:
+  mapbox:type: default
+  mapbox:origin: monochrome-dark-v1
+  mapbox:autocomposite: true
+  mapbox:groups:
+    Transit, transit-labels:
+      name: Transit, transit-labels
+      collapsed: false
+    Administrative boundaries, admin:
+      name: Administrative boundaries, admin
+      collapsed: false
+    Land & water, built:
+      name: Land & water, built
+      collapsed: false
+    Transit, bridges:
+      name: Transit, bridges
+      collapsed: false
+    Transit, surface:
+      name: Transit, surface
+      collapsed: false
+    Land & water, land:
+      name: Land & water, land
+      collapsed: false
+    Road network, bridges:
+      name: Road network, bridges
+      collapsed: false
+    Road network, tunnels:
+      name: Road network, tunnels
+      collapsed: false
+    Road network, road-labels:
+      name: Road network, road-labels
+      collapsed: false
+    Buildings, built:
+      name: Buildings, built
+      collapsed: false
+    Natural features, natural-labels:
+      name: Natural features, natural-labels
+      collapsed: false
+    Road network, surface:
+      name: Road network, surface
+      collapsed: false
+    Place labels, place-labels:
+      name: Place labels, place-labels
+      collapsed: false
+    Point of interest labels, poi-labels:
+      name: Point of interest labels, poi-labels
+      collapsed: false
+    Road network, tunnels-case:
+      name: Road network, tunnels-case
+      collapsed: false
+    Transit, built:
+      name: Transit, built
+      collapsed: false
+    Road network, surface-icons:
+      name: Road network, surface-icons
+      collapsed: false
+    Land & water, water:
+      name: Land & water, water
+      collapsed: false
+  mapbox:sdk-support:
+    js: latest
+    android: latest
+    ios: latest
+  mapbox:decompiler:
+    id: ckxfh7mx4gvlp15lug6ioeb41
+    componentVersion: 3.0.0
+    strata:
+      - id: monochrome-dark-v1
+        order:
+          - - land-and-water
+            - land
+          - - land-and-water
+            - water
+          - - land-and-water
+            - built
+          - - transit
+            - built
+          - - buildings
+            - built
+          - - road-network
+            - tunnels-case
+          - - road-network
+            - tunnels
+          - - transit
+            - ferries
+          - - road-network
+            - surface
+          - - transit
+            - surface
+          - - road-network
+            - surface-icons
+          - - road-network
+            - bridges
+          - - transit
+            - bridges
+          - - road-network
+            - traffic-and-closures
+          - - buildings
+            - extruded
+          - - transit
+            - elevated
+          - - admin-boundaries
+            - admin
+          - - buildings
+            - building-labels
+          - - road-network
+            - road-labels
+          - - transit
+            - ferry-aerialway-labels
+          - - natural-features
+            - natural-labels
+          - - point-of-interest-labels
+            - poi-labels
+          - - transit
+            - transit-labels
+          - - place-labels
+            - place-labels
+    overrides:
+      place-labels:
+        country-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        settlement-major-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        settlement-minor-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        settlement-subdivision-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        state-label:
+          layout:
+            text-field:
+              - step
+              - - zoom
+              - - step
+                - - get
+                  - symbolrank
+                - - coalesce
+                  - - get
+                    - name_en
+                  - - get
+                    - name
+                - 5
+                - - coalesce
+                  - - get
+                    - abbr
+                  - - get
+                    - name_en
+                  - - get
+                    - name
+              - 5
+              - - coalesce
+                - - get
+                  - name_en
+                - - get
+                  - name
+              - 5.582
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+              - 6.768
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+              - 7.419
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+      transit:
+        airport-label:
+          layout:
+            text-field:
+              - step
+              - - get
+                - sizerank
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+              - 3.75
+              - - get
+                - ref
+              - 7.5
+              - - get
+                - ref
+              - 11.25
+              - - get
+                - ref
+              - 15
+              - - get
+                - ref
+      point-of-interest-labels:
+        poi-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+      natural-features:
+        water-point-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        water-line-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        natural-point-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        natural-line-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        waterway-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+      road-network:
+        road-intersection:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        road-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+    components:
+      land-and-water: 3.0.0
+      buildings: 3.0.0
+      road-network: 3.0.0
+      admin-boundaries: 3.0.0
+      natural-features: 3.0.0
+      point-of-interest-labels: 3.0.0
+      transit: 3.0.0
+      place-labels: 3.0.0
+    propConfig:
+      land-and-water:
+        color-base: '#7c9cac'
+        transitionLandOnZoom: false
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
+      buildings:
+        color-base: '#7c9cac'
+        houseNumbers: false
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
+      road-network:
+        icon-color-scheme: monochrome
+        color-place-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        shields: false
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        oneWayArrows: false
+        railwayCrossings: false
+        exits: false
+        polygonFeatures: false
+        color-base: '#7c9cac'
+      admin-boundaries:
+        color-base: '#7c9cac'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
+      natural-features:
+        color-place-label: '#96c0d2'
+        density: 1
+        color-transit: '#96c0d2'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-base: '#7c9cac'
+        labelStyle: Text only
+      point-of-interest-labels:
+        color-place-label: '#96c0d2'
+        density: 1
+        color-transit: '#96c0d2'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-base: '#7c9cac'
+        labelStyle: Text only
+      transit:
+        icon-color-scheme: monochrome
+        color-place-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        aerialways: false
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        transitLabels: false
+        railwayStyle: Solid
+        ferries: false
+        color-base: '#7c9cac'
+      place-labels:
+        color-base: '#7c9cac'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
+  mapbox:uiParadigm: layers
+center:
+  - 138.16975504427404
+  - 36.81601694264636
+zoom: 5.582296386389271
+bearing: 0
+pitch: 0
+sources:
+  composite:
+    url: mapbox://mapbox.mapbox-streets-v8,mapbox.mapbox-terrain-v2
+    type: vector
+sprite: mapbox://sprites/nao2123/ckxfln7pr3gig14mk3nzfto3k/ck2u8j60r58fu0sgyxrigm3cu
+glyphs: mapbox://fonts/mapbox/{fontstack}/{range}.pbf
+layers:
+  - !!inc/file layers/land.yml
+  - !!inc/file layers/landcover.yml
+  - !!inc/file layers/national-park.yml
+  - !!inc/file layers/landuse.yml
+  - !!inc/file layers/pitch-outline.yml
+  - !!inc/file layers/waterway-shadow.yml
+  - !!inc/file layers/water-shadow.yml
+  - !!inc/file layers/waterway.yml
+  - !!inc/file layers/water.yml
+  - !!inc/file layers/land-structure-polygon.yml
+  - !!inc/file layers/land-structure-line.yml
+  - !!inc/file layers/aeroway-polygon.yml
+  - !!inc/file layers/aeroway-line.yml
+  - !!inc/file layers/building-outline.yml
+  - !!inc/file layers/building.yml
+  - !!inc/file layers/tunnel-street-minor-low.yml
+  - !!inc/file layers/tunnel-street-minor-case.yml
+  - !!inc/file layers/tunnel-primary-secondary-tertiary-case.yml
+  - !!inc/file layers/tunnel-major-link-case.yml
+  - !!inc/file layers/tunnel-motorway-trunk-case.yml
+  - !!inc/file layers/tunnel-construction.yml
+  - !!inc/file layers/tunnel-major-link.yml
+  - !!inc/file layers/tunnel-street-minor.yml
+  - !!inc/file layers/tunnel-primary-secondary-tertiary.yml
+  - !!inc/file layers/tunnel-motorway-trunk.yml
+  - !!inc/file layers/turning-feature-outline.yml
+  - !!inc/file layers/road-minor-low.yml
+  - !!inc/file layers/road-minor-case.yml
+  - !!inc/file layers/road-street-low.yml
+  - !!inc/file layers/road-street-case.yml
+  - !!inc/file layers/road-secondary-tertiary-case.yml
+  - !!inc/file layers/road-primary-case.yml
+  - !!inc/file layers/road-major-link-case.yml
+  - !!inc/file layers/road-motorway-trunk-case.yml
+  - !!inc/file layers/road-construction.yml
+  - !!inc/file layers/road-major-link.yml
+  - !!inc/file layers/road-minor.yml
+  - !!inc/file layers/road-street.yml
+  - !!inc/file layers/road-secondary-tertiary.yml
+  - !!inc/file layers/road-primary.yml
+  - !!inc/file layers/road-motorway-trunk.yml
+  - !!inc/file layers/road-rail.yml
+  - !!inc/file layers/turning-feature.yml
+  - !!inc/file layers/bridge-street-minor-low.yml
+  - !!inc/file layers/bridge-street-minor-case.yml
+  - !!inc/file layers/bridge-primary-secondary-tertiary-case.yml
+  - !!inc/file layers/bridge-major-link-case.yml
+  - !!inc/file layers/bridge-motorway-trunk-case.yml
+  - !!inc/file layers/bridge-construction.yml
+  - !!inc/file layers/bridge-major-link.yml
+  - !!inc/file layers/bridge-street-minor.yml
+  - !!inc/file layers/bridge-primary-secondary-tertiary.yml
+  - !!inc/file layers/bridge-motorway-trunk.yml
+  - !!inc/file layers/bridge-major-link-2-case.yml
+  - !!inc/file layers/bridge-motorway-trunk-2-case.yml
+  - !!inc/file layers/bridge-major-link-2.yml
+  - !!inc/file layers/bridge-motorway-trunk-2.yml
+  - !!inc/file layers/bridge-rail.yml
+  - !!inc/file layers/admin-1-boundary-bg.yml
+  - !!inc/file layers/admin-0-boundary-bg.yml
+  - !!inc/file layers/admin-1-boundary.yml
+  - !!inc/file layers/admin-0-boundary.yml
+  - !!inc/file layers/admin-0-boundary-disputed.yml
+  - !!inc/file layers/road-label.yml
+  - !!inc/file layers/road-intersection.yml
+  - !!inc/file layers/waterway-label.yml
+  - !!inc/file layers/natural-line-label.yml
+  - !!inc/file layers/natural-point-label.yml
+  - !!inc/file layers/water-line-label.yml
+  - !!inc/file layers/water-point-label.yml
+  - !!inc/file layers/poi-label.yml
+  - !!inc/file layers/airport-label.yml
+  - !!inc/file layers/settlement-subdivision-label.yml
+  - !!inc/file layers/settlement-minor-label.yml
+  - !!inc/file layers/settlement-major-label.yml
+  - !!inc/file layers/state-label.yml
+  - !!inc/file layers/country-label.yml
+created: '2021-12-21T04:20:46.691Z'
+modified: '2021-12-21T04:20:46.691Z'
+id: ckxfln7pr3gig14mk3nzfto3k
+owner: nao2123
+visibility: private
+protected: false
+draft: false
