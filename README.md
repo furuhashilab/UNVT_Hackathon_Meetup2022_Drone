@@ -9,4 +9,4 @@
 1. sagamihara20211215aoyamauniv1155mapconcierge00arw01_PointCloud_campus05.las をダウンロードしてこのフォルダに置く 
 2. `rake reproject` で a.las ファイルを作成
 
-## [Mapbox studio DRONE BIRDのスタイル作成](https://api.mapbox.com/styles/v1/ranmatsuyama/ckxfh7mx4gvlp15lug6ioeb41.html?title=copy&access_token=pk.eyJ1IjoicmFubWF0c3V5YW1hIiwiYSI6ImNreGRkenp0bjByZHoyb3B6azE0YW1lb3IifQ.iYGVmEEmfwIKoqnBDK1Bng&zoomwheel=true&fresh=true#5.58/36.816/138.17)
+### [Mapbox studio DRONE BIRDのスタイル作成](https://api.mapbox.com/styles/v1/ranmatsuyama/ckxfh7mx4gvlp15lug6ioeb41.html?title=copy&access_token=pk.eyJ1IjoicmFubWF0c3V5YW1hIiwiYSI6ImNreGRkenp0bjByZHoyb3B6azE0YW1lb3IifQ.iYGVmEEmfwIKoqnBDK1Bng&zoomwheel=true&fresh=true#5.58/36.816/138.17)
