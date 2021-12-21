@@ -1,5 +1,5 @@
 version: 8
-name: dronebird_logo_en.png
+name: dronebird_logo.jpg
 metadata:
   mapbox:type: default
   mapbox:origin: monochrome-dark-v1
@@ -63,9 +63,8 @@ metadata:
     js: latest
     android: latest
     ios: latest
-  mapbox:uiParadigm: components
   mapbox:decompiler:
-    id: ckxeskwi41rit14qwwy3200c2
+    id: ckxfh7mx4gvlp15lug6ioeb41
     componentVersion: 3.0.0
     strata:
       - id: monochrome-dark-v1
@@ -118,6 +117,176 @@ metadata:
             - transit-labels
           - - place-labels
             - place-labels
+    overrides:
+      place-labels:
+        country-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        settlement-major-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        settlement-minor-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        settlement-subdivision-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        state-label:
+          layout:
+            text-field:
+              - step
+              - - zoom
+              - - step
+                - - get
+                  - symbolrank
+                - - coalesce
+                  - - get
+                    - name_en
+                  - - get
+                    - name
+                - 5
+                - - coalesce
+                  - - get
+                    - abbr
+                  - - get
+                    - name_en
+                  - - get
+                    - name
+              - 5
+              - - coalesce
+                - - get
+                  - name_en
+                - - get
+                  - name
+              - 5.582
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+              - 6.768
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+              - 7.419
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+      transit:
+        airport-label:
+          layout:
+            text-field:
+              - step
+              - - get
+                - sizerank
+              - - coalesce
+                - - get
+                  - name_ja
+                - - get
+                  - name
+              - 3.75
+              - - get
+                - ref
+              - 7.5
+              - - get
+                - ref
+              - 11.25
+              - - get
+                - ref
+              - 15
+              - - get
+                - ref
+      point-of-interest-labels:
+        poi-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+      natural-features:
+        water-point-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        water-line-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        natural-point-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        natural-line-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        waterway-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+      road-network:
+        road-intersection:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
+        road-label:
+          layout:
+            text-field:
+              - coalesce
+              - - get
+                - name_ja
+              - - get
+                - name
     components:
       land-and-water: 3.0.0
       buildings: 3.0.0
@@ -129,121 +298,98 @@ metadata:
       place-labels: 3.0.0
     propConfig:
       land-and-water:
-        color-place-label: '#ddeef6'
-        color-transit: '#ddeef6'
-        color-road: '#004762'
-        landcover: true
-        color-greenspace: hsl(199, 78%, 57%)
-        color-water: hsl(196, 60%, 77%)
-        color-road-label: '#ddeef6'
+        color-base: '#7c9cac'
         transitionLandOnZoom: false
-        waterStyle: Shadow
-        color-base: hsl(196, 63%, 33%)
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
       buildings:
-        color-place-label: '#ddeef6'
-        color-transit: '#ddeef6'
+        color-base: '#7c9cac'
         houseNumbers: false
-        color-road: '#004762'
-        color-greenspace: '#447084'
-        color-water: '#55b3db'
-        color-road-label: '#ddeef6'
-        color-base: hsl(196, 63%, 33%)
-        underground: false
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
       road-network:
         icon-color-scheme: monochrome
-        color-place-label: '#ddeef6'
-        color-transit: '#ddeef6'
+        color-place-label: '#96c0d2'
+        color-transit: '#96c0d2'
         shields: false
-        color-road: hsl(197, 100%, 19%)
-        color-greenspace: '#447084'
-        color-water: '#55b3db'
-        color-road-label: '#ddeef6'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
         oneWayArrows: false
         railwayCrossings: false
         exits: false
         polygonFeatures: false
-        language: Japanese
-        color-base: hsl(196, 63%, 33%)
+        color-base: '#7c9cac'
       admin-boundaries:
-        admin0: true
-        color-place-label: hsl(199, 52%, 100%)
-        color-transit: '#ddeef6'
-        color-road: '#004762'
-        color-greenspace: '#447084'
-        color-water: '#55b3db'
-        color-road-label: '#ddeef6'
-        worldview: US
-        color-base: hsl(196, 63%, 33%)
+        color-base: '#7c9cac'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
       natural-features:
-        color-place-label: '#ddeef6'
-        waterLabelsFont:
-          - Noto Sans CJK JP Medium
-          - Arial Unicode MS Regular
+        color-place-label: '#96c0d2'
         density: 1
-        color-transit: '#ddeef6'
-        color-road: '#004762'
-        color-greenspace: '#447084'
-        color-water: hsl(196, 60%, 77%)
-        color-road-label: '#ddeef6'
-        language: English
-        poiEtcFont:
-          - Noto Sans CJK JP Bold
-          - Arial Unicode MS Regular
-        color-base: hsl(196, 63%, 33%)
+        color-transit: '#96c0d2'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-base: '#7c9cac'
         labelStyle: Text only
       point-of-interest-labels:
-        color-place-label: '#ddeef6'
+        color-place-label: '#96c0d2'
         density: 1
-        color-transit: '#ddeef6'
-        color-road: '#004762'
-        color-greenspace: hsl(199, 78%, 57%)
-        color-water: '#55b3db'
-        color-road-label: '#ddeef6'
-        color-greenspace-label: hsl(196, 84%, 77%)
-        language: Japanese
-        poiEtcFont:
-          - Noto Sans CJK JP Bold
-          - Arial Unicode MS Regular
-        color-base: hsl(196, 63%, 33%)
+        color-transit: '#96c0d2'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-base: '#7c9cac'
         labelStyle: Text only
       transit:
         icon-color-scheme: monochrome
-        color-place-label: '#ddeef6'
-        color-transit: hsl(199, 58%, 92%)
+        color-place-label: '#96c0d2'
+        color-transit: '#96c0d2'
         aerialways: false
-        color-road: hsl(197, 100%, 19%)
-        color-greenspace: '#447084'
-        color-water: hsl(196, 60%, 77%)
-        color-road-label: '#ddeef6'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
         transitLabels: false
         railwayStyle: Solid
         ferries: false
-        language: Japanese
-        poiEtcFont:
-          - Noto Sans CJK JP Bold
-          - Arial Unicode MS Regular
-        color-base: hsl(196, 63%, 33%)
+        color-base: '#7c9cac'
       place-labels:
-        color-place-label: hsl(199, 52%, 100%)
-        color-transit: '#ddeef6'
-        color-road: '#004762'
-        color-greenspace: '#447084'
-        color-water: '#55b3db'
-        color-road-label: '#ddeef6'
-        worldview: US
-        language: English
-        color-base: hsl(196, 63%, 33%)
+        color-base: '#7c9cac'
+        color-road: '#086c93'
+        color-greenspace: '#7ca4ac'
+        color-water: '#6fbcdc'
+        color-road-label: '#96c0d2'
+        color-transit: '#96c0d2'
+        color-place-label: '#96c0d2'
+  mapbox:uiParadigm: layers
 center:
-  - 111.97247664456944
-  - 34.61307627715273
-zoom: 2.4183591197984162
+  - 138.16975504427404
+  - 36.81601694264636
+zoom: 5.582296386389271
 bearing: 0
 pitch: 0
 sources:
   composite:
-    url: mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v8
+    url: mapbox://mapbox.mapbox-streets-v8,mapbox.mapbox-terrain-v2
     type: vector
-sprite: mapbox://sprites/nao2123/ckxf6aymb31n414mk2cku9wx5/afjczyo6wncr1rpu971sdzfck
+sprite: mapbox://sprites/nao2123/ckxfln7pr3gig14mk3nzfto3k/ck2u8j60r58fu0sgyxrigm3cu
 glyphs: mapbox://fonts/mapbox/{fontstack}/{range}.pbf
 layers:
   - !!inc/file layers/land.yml
@@ -323,9 +469,9 @@ layers:
   - !!inc/file layers/settlement-major-label.yml
   - !!inc/file layers/state-label.yml
   - !!inc/file layers/country-label.yml
-created: '2021-12-20T21:11:20.804Z'
-modified: '2021-12-20T21:11:20.804Z'
-id: ckxf6aymb31n414mk2cku9wx5
+created: '2021-12-21T04:20:46.691Z'
+modified: '2021-12-21T04:20:46.691Z'
+id: ckxfln7pr3gig14mk3nzfto3k
 owner: nao2123
 visibility: private
 protected: false
