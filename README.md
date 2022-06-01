@@ -4,15 +4,16 @@
 [https://furuhashilab.github.io/UNVT_Hackathon_Drone/](https://furuhashilab.github.io/UNVT_Hackathon_Drone/)
 
 
-## How to make Voxel Tile data from PointCloud
+## Technical Information
+### How to make Voxel Tile data from PointCloud
 https://youtu.be/LrDk0VFodTE
 
-# ファイルの説明
+### ファイルの説明
 - constants.rb: 設定情報を入れたファイルです
 - Rakefile: タスクが記載されたファイルです
 - reproject.rb: 投影処理のための pipeline を出力するスクリプトです
 
-# 使い方
+### 使い方
 1. sagamihara20211215aoyamauniv1155mapconcierge00arw01_PointCloud_campus05.las をダウンロードしてこのフォルダに置く 
 2. `rake reproject` で a.las ファイルを作成
 
